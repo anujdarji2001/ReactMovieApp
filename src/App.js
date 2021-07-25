@@ -7,10 +7,36 @@ import Trending from './pages/Trending/Trending';
 import Movies from './pages/Movies/Movies'
 import Series from './pages/Series/Series';
 import Search from './pages/Search/Search';
+import React from 'react';
 
-function App() {
-  return (
-    <BrowserRouter>
+// function App() {
+//   return (
+    // <BrowserRouter>
+    //   <Header />
+    //   <div className="app">
+    //     <Container> 
+    //       <Switch>
+    //         <Route path='/' component={Trending} exact/>
+    //         <Route path='/movies' component={Movies}/>
+    //         <Route path='/series' component={Series}/>
+    //         <Route path='/search' component={Search}/>
+            
+    //       </Switch>
+    //     </Container>
+    //   </div>
+    //   <SimpleBottomNavigation />
+    // </BrowserRouter>
+//   );
+// }
+
+class App extends React.Component {
+  componentDidMount() {
+    this.props.hideLoader();
+  }
+  
+  render() {   
+    return (
+      <BrowserRouter>
       <Header />
       <div className="app">
         <Container> 
@@ -25,7 +51,8 @@ function App() {
       </div>
       <SimpleBottomNavigation />
     </BrowserRouter>
-  );
+    ); 
+  }
 }
 
 export default App;

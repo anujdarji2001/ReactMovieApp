@@ -4,6 +4,7 @@ import './SingleContent.css'
 import ContentModel from "../ContentModel/ContentModel";
 
 
+
 const SingleContent = ({id,poster,title,date,media_type,vote_average}) => {
     return (
         
