@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -11,13 +11,35 @@
     />
     
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="icon" href="/movieshub/public/logo.png" type="image/png">	    
+    <link rel="icon" href="./logo.png" type="image/png">	    
     <title>MoviesHub</title>
+  </head> -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./logo.png" type="image/png">	    
+    <title>MoviesHub</title>
+
   </head>
 
-  <body>
-    <div class="loader"></div>
+  <body onload="loadingFunc()">
+    <div id="preloader"></div>
     <div id="root"></div>
+
+    <script>
+
+    var preloader = document.getElementById('preloader');
+    function loadingFunc(){
+      preloader.style.display = 'none';
+    }
+
+    </script>
+
   </body>
-  
+
 </html>
